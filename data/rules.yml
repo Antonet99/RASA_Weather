@@ -1,0 +1,14 @@
+version: "3.1"
+
+rules:
+
+- rule: hello_rule
+  steps: 
+  - intent: salutare
+  - action: utter_greet
+
+- rule: goodbye_rule
+  steps:
+  - intent: arrivederci
+  - action: utter_arrivederci
+

@@ -1,0 +1,299 @@
+version: "3.1"
+
+nlu:
+- intent: salutare
+  examples: |
+    - ciao
+    - bella
+    - hei
+    - hello there
+    - buongiorno
+    - buona serata
+    - ehi
+    - ciccio
+    - andiamo
+    - hey amico
+    - buon giorno
+    - buonasera
+    - buon proseguimento
+
+- intent: arrivederci
+  examples: |
+    - arrivederci
+    - ci vediamo più tardi
+    - buona notte
+    - arrivederci
+    - le auguro una buona giornata
+    - ci vediamo in giro
+    - ciao ciao
+
+- intent: start
+  examples: |
+    - start
+    - open
+    - begin
+    - init
+
+- intent: who_are_you
+  examples: |
+    - chi sei
+    - sei un bot
+    - qual è il tuo nome
+    - sei umano
+    - cosa sei
+
+# chiacchiere....
+- intent: how_are_you
+  examples: |
+    - come stai
+    - stai bene
+    - piacere, come stai
+    - ciao
+    - come va
+    - come ti senti
+    - come procede
+
+# domande su cosa posso fare
+- intent: capabilities
+  examples: |
+    - cosa puoi fare
+    - quali sono le tue capacità
+    - in cosa sei bravo
+    - a cosa servi
+    - istruzioni
+    - istruzioni
+    - come posso usare questo
+    - informazioni
+    - informazione
+    - aiuto
+    - puoi aiutarmi
+
+
+- lookup: city
+  examples: |
+    - Milano
+    - New York
+    - Roma
+    - Las Vegas
+    - Berlino
+    - Londra
+    - Madrid
+    - Lisbona
+    - Tokyo
+    - Washington
+    - San Vito Chietino
+    - Ancona
+    - Chieti
+    - Lanciano
+    - Parigi
+    - Amsterdam
+    - Barcellona
+    - Sydney
+    - Dubai
+    - Città del Messico
+    - Bangkok
+    - Mosca
+    - Istanbul
+    - Buenos Aires
+    - Rio de Janeiro
+    - Cape Town
+    - Toronto
+    - Mumbai
+    - Pechino
+
+- intent: weather_with_city
+  examples: |
+    - qual è il [meteo](wx_type) a [Berlino](city)?
+    - com'è il [meteo](wx_type) a [Christchurch](city)?
+    - Dimmi il [meteo](wx_type) a [Washington](city)
+    - [meteo](wx_type) a [Auckland](city)
+    - è [ventoso](wx_type) a [Auckland](city)
+    - [pioverà](wx_type) a [Wellington](city)
+    - [pioggia](wx_type) a [Auckland](city) [domani](wx_forecast)
+    - [piove](wx_type) a [Christchurch](city)
+    - [temperatura](wx_type) a [Madrid](city)
+    - qual è la [temperatura](wx_type) a [San Vito Chietino](city)?
+    - [vento](wx_type) a [Milano](city)
+    - [umidità](wx_type) a [Wellington](city)
+    - aria [pressione](wx_type) a [Ancona](city)
+    - [pressione](wx_type) a [Christchurch](city)
+    - qual è la [pressione](wx_type) a [Washington](city) [domani](wx_forecast)
+    - [umidità](wx_type) a [Lisbona](city)
+    - [uvi](wx_type) a [Lanciano](city)
+    - qual è l'[umidità](wx_type) a [Auckland](city)
+    - Qual è la [pioggia](wx_type) di [Wellington](city)?
+    - qual è il [meteo](wx_type) di [Chieti](city)?
+    - com'è l'[indice UV](wx_type) a [San Vito Chietino](city)?
+    - Dimmi il [meteo](wx_type) a [Roma](city) [domani](wx_forecast)
+    - [meteo](wx_type) a [Auckland](city)
+    - [meteo](wx_type) a [Milano](city)
+    - è [ventoso](wx_type) a [Auckland](city)?
+    - [piove](wx_type) a [Wellington](city)
+    - è [nuvoloso](wx_type) a [Lisbona](city)
+    - [pioggia](wx_type) a [Auckland](city)
+    - sta [piovendo](wx_type) a [Ancona](city)?
+    - [temperatura](wx_type) a [Auckland](city)
+    - qual è la [temperatura](wx_type) a [New York](city)
+    - qual sarà il [meteo](wx_type) per [Wellington](city) [domani](wx_forecast)
+    - qual è la [pressione](wx_type) a [Auckland](city)
+    - qual sarà la [pressione](wx_type) dell'aria a [Auckland](city) [domani](wx_forecast)
+    - qual è l'[umidità](wx_type) a [Auckland](city)
+    - [umidità](wx_type) dell'aria a [Auckland](city)
+    - [uvi](wx_type) [Ancona](city)
+    - [meteo](wx_type) [Wellington](city)
+    - a [Wellington](city)
+    - [umidità](wx_type) a [Chieti](city)
+    - [pioggia](wx_type) a [Ancona](city)
+    - [pioggia](wx_type) [Manchester](city)
+    - [piove](wx_type) a [Ancona](city) (domani)(wx_forecast)?
+    - è [ventoso](wx_type) a [Milano](city)?
+    - è [umido](wx_type) a [Lisbona](city)?
+    - fa [caldo](wx_type) a [Madrid](city)?
+    - farà [freddo](wx_type) a [Milano](city) (domani)(wx_forecast)?
+    - è [fresco](wx_type) a [Torino](city)?
+    - sta [piovendo](wx_type) a [Caldarola](city)?
+    - è [ventoso](wx_type) a [Caldarola](city)?
+    - Qual è il [meteo](wx_type) di oggi?
+    - Puoi dirmi le [previsioni](wx_type) del tempo di (domani)(wx_forecast) a (Roma)[city]?
+    - Che [tempo](wx_type) fa domani?
+    - Voglio sapere se [pioverà](wx_type) questa settimana.
+    - Che [temperatura](wx_type) c'è in questo momento?
+    - Hai informazioni sul [meteo](wx_type) di [New York](city)?
+    - Vorrei conoscere le [condizioni meteorologiche](wx_type) di (Roma)[city] di [domani](wx_forecast).
+    - Dimmi se ci sarà [vento](wx_type) [oggi](wx_forecast).
+    - Che [tempo](wx_type) fa a [Londra](city)?
+  
+- intent: weather_without_city
+  examples: |
+    - com'è il [tempo](wx_type) [oggi](wx_forecast)?
+    - com'è il [tempo](wx_type) [domani](wx_forecast)?
+    - Dimmi il [tempo](wx_type) [oggi](wx_forecast)
+    - [tempo](wx_type) [domani](wx_forecast)
+    - fa [vento](wx_type) [ora](wx_forecast)?
+    - [piove](wx_type) [oggi](wx_forecast)
+    - è [nuvoloso](wx_type) [domani](wx_forecast)
+    - [pioviggina](wx_type) [oggi](wx_forecast)
+    - [temperatura](wx_type) [domani](wx_forecast)
+    - qual è la [temperatura](wx_type) [domani](wx_forecast)
+    - qual è la [pressione](wx_type) [domani](wx_forecast)
+    - [pressione](wx_type) dell'aria [domani](wx_forecast)
+    - come sarà il tempo [domani](wx_forecast)?
+    - com'è il tempo [attuale](wx_forecast)?
+    - sta per [piovere](wx_type)?
+    - sarà [soleggiato](wx_type)?
+    - quali sono le [condizioni](wx_type) [domani](wx_forecast)?
+    - [tempo](wx_type)
+    - [pioggia](wx_type)
+    - [vento](wx_type)
+    - [pressione](wx_type)
+    - [umidità](wx_type)
+    - che ne dici del [vento](wx_type)
+    - [soleggiato](wx_type)
+    - [piovoso](wx_type)
+    - [neve](wx_type)
+    - [sole](wx_type)
+    - [pioviggina](wx_type)
+    - [splendente](wx_type)
+    - che ne dici di [domani](wx_forecast)
+    - e [domani](wx_forecast)
+    - che ne dici più tardi [oggi](wx_forecast)
+    - più tardi [oggi](wx_forecast)
+
+# synonym definitions to limit variations and to help NLU
+- synonym: ora
+  examples: |
+    - attualmente
+    - adesso
+    - In questo momento
+    - Attualmente
+    - In quest'istante
+    - In questo istante
+    - In presente
+    - In questo preciso momento
+    - Al momento
+    - In contemporanea
+    - Proprio adesso
+
+- synonym: oggi
+  examples: |
+    - Nella giornata odierna
+    - Durante la giornata di oggi
+    - Per l'intera giornata di oggi
+    - Entro la giornata di oggi
+    - Per oggi
+    - Nel corso della giornata odierna
+    - Per oggi stesso
+    - Durante la giornata in corso
+    - Entro questa giornata
+    - Per l'attuale giornata
+    - più tardi
+    - oggi
+    - più tardi oggi
+    - dopo
+
+- synonym: domani
+  examples: |
+    - Per la giornata di domani
+    - Durante la giornata di domani
+    - Nella giornata di domani
+    - Entro la giornata di domani
+    - Per il prossimo giorno
+    - Nel corso della giornata successiva
+    - Per domani stesso
+    - Durante il giorno successivo
+    - Entro la giornata successiva
+    - Per il giorno a venire
+
+- synonym: piove
+  examples: |
+    - piovendo
+    - piove
+    - pioggia
+    - sta piovendo?
+    - sta piovendo
+    - pioverà
+  
+- synonym: vento
+  examples: |
+    - ventoso
+    - ventilato
+
+- synonym: umidità
+  examples: |
+    - umido
+    - bagnato
+    - aria umida
+    - umidità aria
+    - aria secca
+    - secchezza aria
+
+- synonym: uvi
+  examples: |
+    - uvi
+    - UV
+    - UV indice
+    - indice UV
+    - UVI
+
+- synonym: temperatura
+  examples: |
+    - caldo
+    - freddo
+    - fresco
+    - calore
+    - temp
+    - temperatura
+
+- synonym: meteo
+  examples: |
+    - tempo
+    - wx
+    - previsioni del tempo
+    - previsioni
+    - condizioni meteorologiche
+
+    
+
+
+
+

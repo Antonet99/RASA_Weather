@@ -1,0 +1,73 @@
+version: "3.1"
+
+intents:
+  - salutare
+  - arrivederci
+  - who_are_you
+  - how_are_you
+  - capabilities
+  - weather_with_city:
+      use_entities: true
+  - weather_without_city:
+      use_entities: true
+
+entities:
+  - city
+  - wx_type
+  - wx_forecast
+
+slots:
+    city:
+      type: text
+      mappings:
+        - type: from_entity
+          entity: city
+    wx_type:
+      type: text
+      mappings:
+        - type: from_entity
+          entity: wx_type
+    wx_forecast:
+      type: text
+      mappings:
+        - type: from_entity
+          entity: wx_forecast
+
+
+actions:
+  - action_hello_world
+  - action_weather
+  - utter_arrivederci
+  - utter_greet
+
+responses:
+
+  utter_start:
+  - text: Ciao! Sono Weather Chatbot e ti forniscono le previsioni meteo di OpenWeather. Cosa posso fare per te?
+
+  utter_greet:
+  - text: Ciao, sono Weather Chatbot.
+
+  utter_goodbye:
+  - text: Arrivederci, la tua previsione è stata generata da OpenWeather.
+  - text: La previsione è stata resa disponibile da OpenWeather. A presto.
+
+  utter_im_rasa:
+  - text: Sono Weather Chatbot. Sto utilizzando la piattaforma di intelligenza artificiale conversazionale Rasa Open Source 2.0, ottengo le mie previsioni da OpenWeather e me la cavo bene!
+  - text: Weather Chatbot.
+
+  utter_capabilities:
+  - text: Posso fornirti le previsioni meteo attuali e per oggi o domani. Puoi fare domande sulle piogge, il vento, l'indice UV, la temperatura, le nuvole e la pressione atmosferica.
+
+  utter_im_well:
+  - text: Sto bene, grazie. Posso fornirti le previsioni meteo.
+  - text: Sto bene, grazie.
+  - text: Bene bene.
+
+  utter_arrivederci:
+  - text: "Arrivederci!"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

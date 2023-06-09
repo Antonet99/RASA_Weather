@@ -1,0 +1,38 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: salutare
+  - action: utter_greet
+
+- story: wx_1
+  steps:
+  - intent: weather_with_city
+  - action: action_weather
+
+- story: wx_2
+  steps:
+  - intent: weather_without_city
+  - action: action_weather
+
+
+- story: who_are_you
+  steps:
+  - intent: who_are_you
+  - action: utter_im_rasa
+
+
+# and what can I do
+- story: capabilities
+  steps:
+  - intent: capabilities
+  - action: utter_capabilities
+
+# should the user be friendly...
+- story: how_are_you
+  steps:
+  - intent: how_are_you
+  - action: utter_im_well
+
