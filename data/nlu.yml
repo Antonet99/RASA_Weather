@@ -17,7 +17,7 @@ nlu:
     - buonasera
     - buon proseguimento
 
-- intent: arrivederci
+- intent: goodbye
   examples: |
     - arrivederci
     - ci vediamo più tardi
@@ -26,6 +26,7 @@ nlu:
     - le auguro una buona giornata
     - ci vediamo in giro
     - ciao ciao
+    - addio
 
 - intent: start
   examples: |
@@ -36,22 +37,21 @@ nlu:
 
 - intent: who_are_you
   examples: |
-    - chi sei
-    - sei un bot
-    - qual è il tuo nome
-    - sei umano
-    - cosa sei
+    - chi sei?
+    - sei un bot?
+    - qual è il tuo nome?
+    - sei umano?
+    - cosa sei?
 
 # chiacchiere....
 - intent: how_are_you
   examples: |
-    - come stai
-    - stai bene
-    - piacere, come stai
-    - ciao
-    - come va
-    - come ti senti
-    - come procede
+    - come stai?
+    - stai bene?
+    - piacere, come stai?
+    - come va?
+    - come ti senti?
+    - come procede?
 
 # domande su cosa posso fare
 - intent: capabilities
@@ -67,7 +67,6 @@ nlu:
     - informazione
     - aiuto
     - puoi aiutarmi
-
 
 - lookup: city
   examples: |

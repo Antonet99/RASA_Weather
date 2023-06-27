@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-city",
+      "2": "I-city",
+      "3": "L-city",
+      "4": "U-city",
+      "5": "B-wx_forecast",
+      "6": "I-wx_forecast",
+      "7": "L-wx_forecast",
+      "8": "U-wx_forecast",
+      "9": "B-wx_type",
+      "10": "I-wx_type",
+      "11": "L-wx_type",
+      "12": "U-wx_type",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-city": 1,
+      "I-city": 2,
+      "L-city": 3,
+      "U-city": 4,
+      "B-wx_forecast": 5,
+      "I-wx_forecast": 6,
+      "L-wx_forecast": 7,
+      "U-wx_forecast": 8,
+      "B-wx_type": 9,
+      "I-wx_type": 10,
+      "L-wx_type": 11,
+      "U-wx_type": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

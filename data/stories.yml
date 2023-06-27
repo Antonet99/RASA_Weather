@@ -23,16 +23,15 @@ stories:
   - intent: who_are_you
   - action: utter_im_rasa
 
+- story: how_are_you
+  steps:
+  - intent: how_are_you
+  - action: utter_im_well
+
 
 # and what can I do
 - story: capabilities
   steps:
   - intent: capabilities
   - action: utter_capabilities
-
-# should the user be friendly...
-- story: how_are_you
-  steps:
-  - intent: how_are_you
-  - action: utter_im_well
 

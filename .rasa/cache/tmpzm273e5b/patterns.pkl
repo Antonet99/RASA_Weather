@@ -1,0 +1,6 @@
+[
+  {
+    "name": "city",
+    "pattern": "(\\bMilano\\b|\\bNew\\ York\\b|\\bRoma\\b|\\bLas\\ Vegas\\b|\\bBerlino\\b|\\bLondra\\b|\\bMadrid\\b|\\bLisbona\\b|\\bTokyo\\b|\\bWashington\\b|\\bSan\\ Vito\\ Chietino\\b|\\bAncona\\b|\\bChieti\\b|\\bLanciano\\b|\\bParigi\\b|\\bAmsterdam\\b|\\bBarcellona\\b|\\bSydney\\b|\\bDubai\\b|\\bCittà\\ del\\ Messico\\b|\\bBangkok\\b|\\bMosca\\b|\\bIstanbul\\b|\\bBuenos\\ Aires\\b|\\bRio\\ de\\ Janeiro\\b|\\bCape\\ Town\\b|\\bToronto\\b|\\bMumbai\\b|\\bPechino\\b)"
+  }
+]

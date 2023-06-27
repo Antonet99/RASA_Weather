@@ -6,6 +6,7 @@
 
 
 from typing import Any, Text, Dict, List
+from rasa_sdk.events import AllSlotsReset
 from rasa_sdk.events import SlotSet
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -232,24 +233,20 @@ class Weather(Action):
                     response = f"Le condizioni previste per {city} {wx_forecast} sono {cond_predict} e la pioggia caduta nelle 24 ore dovrebbe essere {pioggia_predict}mm."
                     dispatcher.utter_message(response)
 
-            city = None
-            wx_type = None
-            wx_forecast = None
-
-            return []
+            return [SlotSet("city", None)]
 
         except requests.HTTPError:
             status = response.status_code
             if status == 401:
                 dispatcher.utter_message("Chiave API non valida.")
-                return []
+                return [SlotSet("city", None)]
             elif status == 404:
                 dispatcher.utter_message("Input della città non valido.")
-                return []
+                return [SlotSet("city", None)]
             elif status in (429, 443):
                 dispatcher.utter_message("Chiamate API al minuto superate.")
-                return []
+                return [SlotSet("city", None)]
             else:
                 dispatcher.utter_message(
                     "Si è verificato un errore generico durante la richiesta dei dati meteorologici.")
-                return []
+                return [SlotSet("city", None)]

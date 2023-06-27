@@ -2,6 +2,11 @@ version: "3.1"
 
 rules:
 
+- rule: Start the conversation
+  steps: 
+  - intent: start
+  - action: utter_start
+
 - rule: hello_rule
   steps: 
   - intent: salutare
@@ -9,6 +14,5 @@ rules:
 
 - rule: goodbye_rule
   steps:
-  - intent: arrivederci
-  - action: utter_arrivederci
-
+  - intent: goodbye
+  - action: utter_goodbye
